@@ -1,11 +1,11 @@
 const isProd = process.env.NODE_ENV === 'production';
 
 module.exports = {
-  basePath: isProd ? '/chat-app-client' : '',
-  assetPrefix: isProd ? '/chat-app-client/' : '',
+  basePath: isProd ? '' : '',
+  assetPrefix: isProd ? '/' : '',
   output: "export",
   publicRuntimeConfig: {
-    assetPrefix: isProd ? '/chat-app-client/' : '',
+    assetPrefix: isProd ? '/' : '',
   },
   images: {
     loader: 'imgix',
