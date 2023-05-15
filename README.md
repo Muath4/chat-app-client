@@ -1,10 +1,7 @@
 # Chat App with Next.js, React, and .NET SignalR
 This is a simple chat application built with Next.js, React, and .NET SignalR. The app allows users to enter their name and join or create chat rooms with unique room IDs. Inside a room, users can send messages, see a list of participants, and leave the room. This application is part of my portfolio demonstrating my proficiency in web development.
 
-## Screenshots
-## <img src="./screenshots/mainPage.png" alt="Chat App Screenshot - main" width="750" height="600">
-## <img src="./screenshots/conversation1.png" alt="Chat App Screenshot - coversation" width="750" height="600">
-## <img src="./screenshots/conversation2.png" alt="Chat App Screenshot - coversation" width="750" height="600">
+### You can find a live demo [here](https://muath4.github.io/chat-app-client/) 
 
 **Note**: This repository contains the frontend code. The .NET backend code can be found in a separate repository: https://github.com/Muath4/chat-app-backend
 
@@ -34,7 +31,7 @@ To get started with running the application locally, follow these steps:
 - dotnet run
 2- Start the frontend development server by running the following command inside the chat-app directory:
 - npm run dev
-3- Open your browser and visit http://localhost:3000 to access the chat app. The backend server is accessible at https://localhost:7262/chatHub.
+3- Open your browser and visit http://localhost:3000 to access the chat app. The backend server is accessible at https://mchatapp.azurewebsites.net/chatHub.
 
 ## Deployment
 To deploy the application, follow the instructions for your preferred hosting platform. Below are guides for deploying Next.js applications to some popular platforms:
