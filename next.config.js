@@ -1,3 +1,4 @@
+// next.config.js
 const isProd = process.env.NODE_ENV === 'production';
 
 module.exports = {
@@ -11,4 +12,5 @@ module.exports = {
     loader: 'imgix',
     path: isProd ? 'https://muath4.github.io/chat-app-client/' : '/',
   },
+  target: 'server',
 };
