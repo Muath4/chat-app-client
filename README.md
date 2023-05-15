@@ -34,7 +34,7 @@ To get started with running the application locally, follow these steps:
 - dotnet run
 2- Start the frontend development server by running the following command inside the chat-app directory:
 - npm run dev
-3- Open your browser and visit http://localhost:3000 to access the chat app. The backend server is accessible at https://localhost:7262/chatHub.
+3- Open your browser and visit http://localhost:3000 to access the chat app. The backend server is accessible at https://mchatapp.azurewebsites.net/chatHub.
 
 ## Deployment
 To deploy the application, follow the instructions for your preferred hosting platform. Below are guides for deploying Next.js applications to some popular platforms:
