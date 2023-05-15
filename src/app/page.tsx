@@ -7,7 +7,7 @@ export default function Home() {
     <main className={styles.main}>
       <div className={styles.description}>
       <a
-            href="https://github.com/"
+            href="https://github.com/Muath4/chat-app-client/"
             target="_blank"
             rel="noopener noreferrer"
           >
