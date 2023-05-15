@@ -1,34 +1,19 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Chat App with Next.js, React, and .NET SignalR
+This is a simple chat application built with Next.js, React, and .NET SignalR. The app allows users to enter their name and join or create chat rooms with unique room IDs. Inside a room, users can send messages, see a list of participants, and leave the room. This application is part of my portfolio demonstrating my proficiency in web development.
 
-## Getting Started
+Note: This repository contains the frontend code. The .NET backend code can be found in a separate repository: https://github.com/yourusername/chat-app-backend
 
-First, run the development server:
+Features
+User authentication with name input
+Unique room ID creation
+Real-time messaging with .NET SignalR
+Display participant count in chat rooms
+Option to leave chat room
+Responsive user interface
+Getting Started
+To get started with running the application locally, follow these steps:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Prerequisites
+Node.js (v14+)
+.NET SDK (v5.0+)
+npm
