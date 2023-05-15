@@ -1,3 +1,4 @@
+// next.config.mjs
 /**
  * @type {import('next').NextConfig}
  */
@@ -6,8 +7,8 @@ const nextConfig = {
     loader: 'akamai',
     path: '',
   },
-  assetPrefix: '',
-  output: 'export',
+  assetPrefix: './',
+  experimental: { output: 'export' },
 };
 
 export default nextConfig;
