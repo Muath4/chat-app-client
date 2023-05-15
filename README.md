@@ -48,8 +48,8 @@ For deploying the .NET backend, refer to the official Microsoft documentation.
 If you're interested in contributing to this project, feel free to submit a pull request or open an issue for discussion.
 
 ## Acknowledgements
-- Next.js
-- React
-- .NET
-- SignalR
+- [Next.js](https://nextjs.org/)
+- [React](https://react.dev/)
+- [.NET](https://dotnet.microsoft.com/en-us/)
+- [SignalR](https://learn.microsoft.com/en-us/aspnet/signalr/)
 
