@@ -1,9 +1,14 @@
+const isProd = process.env.NODE_ENV === 'production';
+
 module.exports = {
   // Use the prefix for GitHub Pages
-  basePath: process.env.NODE_ENV === 'production' ? '/chat-app-client' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/chat-app-client/' : '',
-  output: 'export',
+  basePath: isProd ? '/chat-app-client' : '',
+  assetPrefix: isProd ? '/chat-app-client/' : '',
   publicRuntimeConfig: {
-    assetPrefix: process.env.NODE_ENV === 'production' ? '/chat-app-client/' : '',
+    assetPrefix: isProd ? '/chat-app-client/' : '',
+  },
+  images: {
+    loader: 'imgix',
+    path: isProd ? 'https://muath4.github.io/chat-app-client/' : '/',
   },
 };
