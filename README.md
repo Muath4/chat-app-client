@@ -1,6 +1,11 @@
 # Chat App with Next.js, React, and .NET SignalR
 This is a simple chat application built with Next.js, React, and .NET SignalR. The app allows users to enter their name and join or create chat rooms with unique room IDs. Inside a room, users can send messages, see a list of participants, and leave the room. This application is part of my portfolio demonstrating my proficiency in web development.
 
+## Screenshots
+## <img src="./screenshots/mainPage.png" alt="Chat App Screenshot - main" width="750" height="600">
+## <img src="./screenshots/conversation1.png" alt="Chat App Screenshot - coversation" width="750" height="600">
+## <img src="./screenshots/conversation2.png" alt="Chat App Screenshot - coversation" width="750" height="600">
+
 **Note**: This repository contains the frontend code. The .NET backend code can be found in a separate repository: https://github.com/Muath4/chat-app-backend
 
 ## Features
@@ -43,8 +48,8 @@ For deploying the .NET backend, refer to the official Microsoft documentation.
 If you're interested in contributing to this project, feel free to submit a pull request or open an issue for discussion.
 
 ## Acknowledgements
-- Next.js
-- React
-- .NET
-- SignalR
+- [Next.js](https://nextjs.org/)
+- [React](https://react.dev/)
+- [.NET](https://dotnet.microsoft.com/en-us/)
+- [SignalR](https://learn.microsoft.com/en-us/aspnet/signalr/)
 
