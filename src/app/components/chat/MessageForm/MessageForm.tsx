@@ -32,7 +32,7 @@ const MessageForm: React.FC<MessageFormProps> = ({ roomId, setRoomId, userName, 
       };
 
       const newConnection = new signalR.HubConnectionBuilder()
-        .withUrl('https://localhost:7262/chatHub')
+        .withUrl('https://mchatapp.azurewebsites.net/chatHub')
         .withAutomaticReconnect()
         .build();
 

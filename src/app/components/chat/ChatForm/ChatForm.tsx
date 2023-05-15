@@ -22,7 +22,7 @@ const ChatForm: React.FC = () => {
 
       {roomId && (
         <div>
-          <h4 className={styles.userCount}>user count in this room: {userCount}</h4>
+          <h4 className={styles.userCount}>User count in this room: {userCount}</h4>
           <MessageList messages={messages} />
 
           <MessageForm roomId={roomId} setRoomId={setRoomId} userName={user} setMessages={setMessages} setUserCount={setUserCount} />
