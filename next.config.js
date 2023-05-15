@@ -3,6 +3,7 @@ const isProd = process.env.NODE_ENV === 'production';
 module.exports = {
   basePath: isProd ? '/chat-app-client' : '',
   assetPrefix: isProd ? '/chat-app-client/' : '',
+  output: "export",
   publicRuntimeConfig: {
     assetPrefix: isProd ? '/chat-app-client/' : '',
   },
