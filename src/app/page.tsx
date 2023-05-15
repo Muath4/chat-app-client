@@ -14,7 +14,7 @@ export default function Home() {
 <p>
       
             <img 
-              src="/github-mark.svg"
+              src="./github-mark.svg"
               alt="Github"
               className={styles.vercelLogo}
               width={30}
@@ -25,7 +25,7 @@ export default function Home() {
           </a>
         <div>
             <img 
-              src="/logo.png"
+              src="./logo.png"
               alt="Logo"
               className={styles.vercelLogo}
               width={70}

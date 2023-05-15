@@ -125,7 +125,7 @@ const MessageForm: React.FC<MessageFormProps> = ({ roomId, setRoomId, userName, 
         size='small'
         endIcon={
         <Image
-          src="/exit.svg"
+          src="./exit.svg"
           alt="Logo"
           width={30}
           height={30}/>
