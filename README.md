@@ -1,34 +1,50 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Chat App with Next.js, React, and .NET SignalR
+This is a simple chat application built with Next.js, React, and .NET SignalR. The app allows users to enter their name and join or create chat rooms with unique room IDs. Inside a room, users can send messages, see a list of participants, and leave the room. This application is part of my portfolio demonstrating my proficiency in web development.
 
+**Note**: This repository contains the frontend code. The .NET backend code can be found in a separate repository: https://github.com/Muath4/chat-app-backend
+
+## Features
+User authentication with name input
+Unique room ID creation
+Real-time messaging with .NET SignalR
+Display participant count in chat rooms
+Option to leave chat room
+Responsive user interface
 ## Getting Started
+To get started with running the application locally, follow these steps:
 
-First, run the development server:
+### Installation
+1. Clone both the frontend and backend repositories:
+- git clone https://github.com/Muath4/chat-app-client.git
+- git clone https://github.com/Muath4/chat-app-backend.git
+2. Install the frontend dependencies:
+- cd chat-app
+- npm install
+3. Install the backend dependencies:
+- cd ../chat-app-backend
+- dotnet restore
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+### Running the Application
+1- Start the backend server by running the following command inside the chat-app-backend directory:
+- dotnet run
+2- Start the frontend development server by running the following command inside the chat-app directory:
+- npm run dev
+3- Open your browser and visit http://localhost:3000 to access the chat app. The backend server is accessible at https://localhost:7262/chatHub.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Deployment
+To deploy the application, follow the instructions for your preferred hosting platform. Below are guides for deploying Next.js applications to some popular platforms:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Vercel
+- Netlify
+- Heroku
+For deploying the .NET backend, refer to the official Microsoft documentation.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Contributing
+If you're interested in contributing to this project, feel free to submit a pull request or open an issue for discussion.
 
-## Learn More
+## Acknowledgements
+- Next.js
+- React
+- .NET
+- SignalR
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
