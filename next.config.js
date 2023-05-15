@@ -8,6 +8,6 @@ module.exports = {
   },
   images: {
     loader: 'imgix',
-    path: isProd ? 'https://muath4.github.io/chat-app-client/' : '/',
+    path: isProd ? 'https://happy-dune-07f976010.3.azurestaticapps.net/' : '/',
   },
 };
