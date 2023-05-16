@@ -5,6 +5,7 @@ import styles  from "./JoinRoomForm.module.css";
 interface JoinRoomFormProps {
   setRoomId: (roomId: string) => void;
   setUser: (userName: string) => void;
+  setLoading: (loading: boolean) => void;
   userName: string;
 }
 
@@ -13,12 +14,13 @@ function isNumber(value?: string | number): boolean
    return ((value != null) &&
            !isNaN(Number(value.toString())));
 }
-const JoinRoomForm: React.FC<JoinRoomFormProps> = ({ setRoomId, setUser, userName }) => {
+const JoinRoomForm: React.FC<JoinRoomFormProps> = ({ setRoomId, setUser, userName, setLoading }) => {
   const [inputRoomId, setInputRoomId] = useState('');
 
   const handleRoomSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setRoomId(inputRoomId);
+    setLoading(true);
   };
 
 

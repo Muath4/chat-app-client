@@ -11,13 +11,23 @@ interface MessageFormProps {
   userName: string;
   setMessages: React.Dispatch<React.SetStateAction<Message[]>>;
   setUserCount: React.Dispatch<React.SetStateAction<number>>;
+  setLoading: (loading: boolean) => void;
+  loading: boolean;
 }
 
-const MessageForm: React.FC<MessageFormProps> = ({ roomId, setRoomId, userName, setMessages, setUserCount }) => {
+
+const MessageForm: React.FC<MessageFormProps> = ({ roomId, setRoomId, userName, setMessages, setUserCount, setLoading, loading }) => {
   const [text, setText] = useState('');
   const [connection, setConnection] = useState<signalR.HubConnection | null>(null);
 
+  const handleLoading = (isLoading: boolean) => {
+    if (roomId) {
+      setLoading(isLoading);
+    }
+  };
+
   useEffect(() => {
+
     if (roomId) {
       const handleSystemMessage = (message: string) => {
         setMessages((prevMessages) => [...prevMessages, { user: 'System', text: message }]);
@@ -38,6 +48,7 @@ const MessageForm: React.FC<MessageFormProps> = ({ roomId, setRoomId, userName, 
 
       newConnection.start()
         .then(async () => {
+          handleLoading(false);
           console.log('Connection started');
           await newConnection.invoke('JoinRoom', roomId, userName);
         })
@@ -50,11 +61,13 @@ const MessageForm: React.FC<MessageFormProps> = ({ roomId, setRoomId, userName, 
 
       newConnection.onreconnecting((error) => {
         console.log("try to reconnect");
+        handleLoading(true);
       });
 
       newConnection.onclose((error) => {
         console.log("lost the connection");
         setRoomId('');
+        handleLoading(true);
       })
 
       setConnection(newConnection);
@@ -94,6 +107,7 @@ const MessageForm: React.FC<MessageFormProps> = ({ roomId, setRoomId, userName, 
         await connection.stop()
         setMessages([])
         setRoomId('');
+        handleLoading(false);
       } catch (error) {
         console.error(error);
       }
@@ -101,7 +115,8 @@ const MessageForm: React.FC<MessageFormProps> = ({ roomId, setRoomId, userName, 
   };
 
   return (
-      <form className={styles.form} onSubmit={handleMessageSubmit}>
+    <>
+      {!loading && <form className={styles.form} onSubmit={handleMessageSubmit}>
 
         <TextField
           id="outlined-basic"
@@ -119,21 +134,22 @@ const MessageForm: React.FC<MessageFormProps> = ({ roomId, setRoomId, userName, 
         </Button>
 
         <Button
-        variant="outlined"
-        onClick={handleLeaveRoomButton}
-        color='error'
-        size='small'
-        endIcon={
-        <Image
-          src="./exit.svg"
-          alt="Logo"
-          width={30}
-          height={30}/>
-      }
+          variant="outlined"
+          onClick={handleLeaveRoomButton}
+          color='error'
+          size='small'
+          endIcon={
+            <Image
+              src="./exit.svg"
+              alt="Logo"
+              width={30}
+              height={30} />
+          }
         >
-        Leave the room
-      </Button>
-      </form>
+          Leave the room
+        </Button>
+      </form>}
+    </>
   );
 };
 
